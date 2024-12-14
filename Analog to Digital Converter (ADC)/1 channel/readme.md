@@ -1,1 +1,2 @@
-
+![Screenshot 2024-12-14 153224](https://github.com/user-attachments/assets/2332096d-b6d9-4d81-9aec-9a88d6e5df3d)
+Above is a simple ADC sensor that detects motion using basic components, using the 10k potentiometer you can adjust the distance for the threshhold. Please note that room light also takes in affect for the codes thresh hold as well, the blue circle in the image is where you place the ACD channel.

@@ -43,7 +43,7 @@ void PORT5_IRQHandler(void)
 {
     int a;
 
-        if (P5->IFG & BIT6)
+        if (P5->IFG & BIT6) // set interrupt
         {
           for(a = 0 ; a < 5; a++)
           {
@@ -51,6 +51,6 @@ void PORT5_IRQHandler(void)
           }
         }
 
-       P5->IFG &= ~BIT6;
+       P5->IFG &= ~BIT6; // clear interrupt
 
 }

@@ -14,15 +14,7 @@ int number1;
 int number2;
 int number3;
 int number4;
-void delay(int ms)
-{
-    int i;
-    for(i= 0; i<ms; i++)//clock frequency
-    {
 
-        __delay_cycles(3000); //3MHz clock
-    }
-}
 void ADC()
 {
     P5->SEL0 |= (BIT0 | BIT1 | BIT5|BIT4);// player1 = P5.0, player2 = P5.1, player3 = P5.4, player4=P5.5

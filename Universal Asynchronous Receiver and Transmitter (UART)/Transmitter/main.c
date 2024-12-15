@@ -3,6 +3,16 @@
 #include <stdlib.h>
 #include <string.h>
 char message[]="hello";
+char message2[]="utep";
+void delay(int ms)
+{
+    int i;
+    for(i= 0; i<ms; i++)//clock frequency
+    {
+
+        __delay_cycles(3000); //3MHz clock
+    }
+}
 void UARTA2() // UART 3.2 & 3.3
 {
     // PINS UART Ports
@@ -28,8 +38,11 @@ void main(void)
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD; // stop watchdog timer
 
     UARTA2();
-  
-  // P1.1 Switch
+//P1.4 Switch
+    P1->DIR &= ~BIT4;
+    P1->REN |= BIT4;
+    P1->OUT |= BIT4;
+//P1.1 Switch
     P1->DIR &= ~BIT1;
     P1->REN |= BIT1;
     P1->OUT |= BIT1;
@@ -40,7 +53,13 @@ void main(void)
       if(!(P1->IN&BIT4))
       {
         sendString(message);
-      }  
+        delay(200);
+      }
+      if(!(P1->IN&BIT1))
+      {
+        sendString(message2);
+        delay(200);
+      }
     }
 }
 void sendString(char *str)
@@ -52,5 +71,5 @@ void sendString(char *str)
         while (!(EUSCI_A2->IFG & EUSCI_A_IFG_TXIFG)); // wait until is ready to transmit
         EUSCI_A2->TXBUF = str[i]; // send character through buffer
     }while(str[i] != '\0');
-            printf("Sent : %s ,", str);
+            printf("Sent : %s ,\n", str);
 }

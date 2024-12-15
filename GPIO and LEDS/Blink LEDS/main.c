@@ -31,7 +31,7 @@ void main(void)
                P2->OUT |= BIT2;
                delay(500); // 0.5 seconds
                P2->OUT &= ~BIT2;
-               delay(1000);
+               delay(500);
             }
 
         }
@@ -42,7 +42,7 @@ void main(void)
               P2->OUT |= BIT1;
               delay(500);
               P2->OUT &= ~BIT1;
-              delay(1000);
+              delay(500);
             }
 
         }

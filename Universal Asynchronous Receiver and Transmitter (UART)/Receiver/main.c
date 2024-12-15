@@ -57,6 +57,6 @@ char data[10];
             i=10;
         }
     }
-   printf("got %s\n",data);
+   printf("%s\n",data);
 
 }

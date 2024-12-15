@@ -74,37 +74,28 @@ void ADC14_IRQHandler(void)
         number1++;
 
         sprintf(player1, "%c%d", myChar1, number1);
-        sendString(player1);
         printf("ADC Value Player1= %s\n", player1);
-        delay(100);
-
     }
     if (adcRaw2 < threshold) // Vcc/2 -> 3.04/2
     {
         number2++;
 
         sprintf(player2, "%c%d", myChar2, number2);
-        sendString(player2);
         printf("ADC Value Player2= %s\n", player2);
-        delay(100);
     }
     if (adcRaw3 < threshold) // Vcc/2 -> 3.04/2
     {
         number3++;
 
         sprintf(player3, "%c%d", myChar3, number3);
-        sendString(player3);
         printf("ADC Value Player3= %s\n", player3);
-        delay(100);
     }
     if (adcRaw4 < threshold) // Vcc/2 -> 3.04/2
     {
         number4++;
 
         sprintf(player4, "%c%d", myChar4, number4);
-        sendString(player4);
         printf("ADC Value Player4= %s\n", player4);
-        delay(100);
     }
 
 

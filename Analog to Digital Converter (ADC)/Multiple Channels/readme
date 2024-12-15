@@ -1,1 +1,1 @@
-This code shows 4 ADC channels, in a old racing project I only implimented ADC in this main code. There are 4 players: P.50, P5.1, P5.4 and P5.5 are in ADC and are grabbing data. Each have a letter with a number after the letter.
+This code shows 4 ADC channels, THIS racing project HAS 4 IR Sensors in a track for four cars. There are 4 players: P.50, P5.1, P5.4 and P5.5 are in ADC and are grabbing data. Each have a letter with a number after the letter.
